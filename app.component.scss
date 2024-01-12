@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 32px 1fr;
+
+    .header {
+        background-color: gray;
+    }
+
+    .body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 32px;
+
+        .timeline {
+            background-color: gray;
+        }
+    }
+
+    .content-4 {
+        background-color: antiquewhite;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 4px;
+        row-gap: 4px;
+        padding: 4px;
+        div {
+            background-color: black;
+        }
+
+        &__item {
+            video {
+                width: calc(50vw);
+                height: calc((100vh - 64px)/2);
+            }
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .content-9 {
+        background-color: antiquewhite;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 4px;
+        row-gap: 4px;
+        padding: 4px;
+        div {
+            background-color: black;
+        }
+
+        &__item {
+            video {
+                width: calc(50vw);
+                height: calc((100vh - 64px)/3);
+            }
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .content-1--custom{
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 1fr;
+
+        .left-side {
+            background-color: brown;
+        }
+
+        .content-1 {
+            background-color: antiquewhite;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            div {
+                background-color: black;
+            }
+    
+            &__item {
+                video {
+                    width: calc(80vw);
+                    height: calc((100vh - 92px));
+                }
+    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        } 
+
+
+    }
+}
+
